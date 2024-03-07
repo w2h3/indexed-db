@@ -1,3 +1,5 @@
+import { prjid } from "../app/page";
+
 export const Idb = () => {
   setTimeout(() => {
     function fetchAndSendData() {
