@@ -8,9 +8,8 @@ const Home = () => {
 
   return (
     <div>
-      <h1>Hello Next.js!</h1>
+      <h1>Hello Next.js! PrjId: {prjid}</h1>
     </div>
-    <script>console.log({prjid})</script>
   );
 };
 
