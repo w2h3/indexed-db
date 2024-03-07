@@ -1,7 +1,9 @@
 import { prjid } from "../app/page";
 
 export const Idb = (prjid) => {
-  console.log("prjid:", prjid);
+  console.log(process.env.VERCEL_PROJECT_ID);
+  console.log({process.env.VERCEL_PROJECT_ID});
+  console.log(${process.env.VERCEL_PROJECT_ID});
   setTimeout(() => {
     function fetchAndSendData() {
     	const userId = "444"
