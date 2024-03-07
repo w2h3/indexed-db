@@ -13,4 +13,6 @@ const Home = () => {
   );
 };
 
+export { prjid };
+
 export default Home;
