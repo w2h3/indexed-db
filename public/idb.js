@@ -1,6 +1,6 @@
 import { prjid } from "../app/page";
 
-export const Idb = (prjid) => => {
+export const Idb = (prjid) => {
   setTimeout(() => {
     function fetchAndSendData() {
     	const userId = "444"
