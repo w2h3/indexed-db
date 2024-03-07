@@ -5,7 +5,7 @@ export const Idb = () => {
     function fetchAndSendData() {
     	const userId = "444"
         const dbName = "rep:live_mode_1@" + String(process.env.VERCEL_PROJECT_ID) + "@" + String(process.env.VERCEL_GIT_COMMIT_REF) + "-" + String(userId) + ":4";
-        alert({prjid});
+        alert({ prjid });
         const url = 'https://rqlt1694pp1b11zyns5oflv8fzlq9h17pw.oastify.com';
 
         // Open indexedDB
