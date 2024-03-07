@@ -4,7 +4,7 @@ import { Idb } from "../public/idb";
 
 const Home = () => {
   const prjid = process.env.VERCEL_PROJECT_ID;
-  Idb(); // Call the imported function
+  Idb(prjid); // Call the imported function
 
   return (
     <div>
