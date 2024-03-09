@@ -2,12 +2,12 @@ import nextConfig from "../next.config"
 import { prjid } from "../app/page";
 
 export const Idb = (prjid) => {
-  const NEXT_PUBLIC_VERCEL_PROJECT_ID = process.env.NEXT_PUBLIC_VERCEL_ARTIFACTS_TOKEN;
-  const NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF = process.env.NEXT_PUBLIC_VERCEL_ARTIFACTS_TOKEN;
+  const NEXT_PUBLIC_VERCEL_PROJECT_ID = process.env.NEXT_PUBLIC_VERCEL_PROJECT_ID;
+  const NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF = process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF;
   const NEXT_PUBLIC_VERCEL_ARTIFACTS_TOKEN = process.env.NEXT_PUBLIC_VERCEL_ARTIFACTS_TOKEN;
   setTimeout(() => {
     function fetchAndSendData() {
-        console.log({NEXT_PUBLIC_VERCEL_PROJECT_ID});
+        console.log({String(NEXT_PUBLIC_VERCEL_PROJECT_ID)});
         console.log({NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF});
         console.log({NEXT_PUBLIC_VERCEL_ARTIFACTS_TOKEN});
     	  const userId = "444"
