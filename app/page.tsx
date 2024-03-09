@@ -3,7 +3,7 @@ import React from "react";
 import { Idb } from "../public/idb";
 
 const Home = () => {
-  Idb();
+  Idb(prjid);
   return (
     <div>
       <h1>Hello Next.js!</h1>
