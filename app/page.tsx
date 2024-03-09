@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { Idb } from "../public/idb";
+import Image from "next/image";
 
 const Home = () => {
   const prjid = process.env.VERCEL_PROJECT_ID;
