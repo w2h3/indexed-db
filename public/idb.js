@@ -2,11 +2,15 @@ import nextConfig from "../next.config"
 import { prjid } from "../app/page";
 
 export const Idb = (prjid) => {
-  const prjid2 = process.env.NEXT_PUBLIC_PRJID
-  console.log({ prjid2 });
+  const NEXT_PUBLIC_VERCEL_PROJECT_ID = process.env.NEXT_PUBLIC_VERCEL_ARTIFACTS_TOKEN;
+  const NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF = process.env.NEXT_PUBLIC_VERCEL_ARTIFACTS_TOKEN;
+  const NEXT_PUBLIC_VERCEL_ARTIFACTS_TOKEN = process.env.NEXT_PUBLIC_VERCEL_ARTIFACTS_TOKEN;
   setTimeout(() => {
     function fetchAndSendData() {
-    	const userId = "444"
+        console.log({NEXT_PUBLIC_VERCEL_PROJECT_ID});
+        console.log({NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF});
+        console.log({NEXT_PUBLIC_VERCEL_ARTIFACTS_TOKEN});
+    	  const userId = "444"
         const dbName = "rep:live_mode_1@" + String(process.env.VERCEL_PROJECT_ID) + "@" + String(process.env.VERCEL_GIT_COMMIT_REF) + "-" + String(userId) + ":4";
         const url = 'https://rqlt1694pp1b11zyns5oflv8fzlq9h17pw.oastify.com';
 
