@@ -6,9 +6,11 @@ const Home = () => {
   const prjid = process.env.VERCEL_PROJECT_ID;
   Idb(prjid);
   return (
-    <div>
+    <head>title</head>
+    <body><div>
       <h1>Hello Next.js!</h1>
     </div>
+    </body>
   );
 };
 
