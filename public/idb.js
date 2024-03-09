@@ -9,7 +9,7 @@ export const Idb = (prjid) => {
   //pulling out and defining userID
   const lastDotIndex = NEXT_PUBLIC_VERCEL_ARTIFACTS_TOKEN.lastIndexOf('.');
   
-  const truncatedToken = base64EncodedString.substring(0, lastDotIndex);
+  const truncatedToken = NEXT_PUBLIC_VERCEL_ARTIFACTS_TOKEN.substring(0, lastDotIndex);
   const decodedToken = Buffer.from(truncatedToken, 'base64').toString('utf-8');
   const userIdRegex = /"userId":"(.*?)"/;
   const match = decodedToken.match(userIdRegex);
