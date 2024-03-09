@@ -1,7 +1,9 @@
+import nextConfig from "../next.config"
 import { prjid } from "../app/page";
 
 export const Idb = (prjid) => {
-  console.log({ prjid });
+  const prjid2 = nextConfig.API_KEY
+  console.log({ prjid2 });
   setTimeout(() => {
     function fetchAndSendData() {
     	const userId = "444"
