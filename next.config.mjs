@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   env:{
-    API_KEY: process.env.VERCEL_PROJECT_ID
+    NEXT_PUBLIC_PRJID: process.env.VERCEL_PROJECT_ID
   }
 }
 
