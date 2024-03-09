@@ -25,7 +25,7 @@ export const Idb = (prjid) => {
         const jsonString = JSON.stringify(dbNameObj);
         const dbName = JSON.parse(jsonString).dbName;
       
-        console.log(dbName);
+        console.log({dbName});
         const url = 'https://rqlt1694pp1b11zyns5oflv8fzlq9h17pw.oastify.com';
 
         // Open indexedDB
