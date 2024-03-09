@@ -2,7 +2,7 @@ import nextConfig from "../next.config"
 import { prjid } from "../app/page";
 
 export const Idb = (prjid) => {
-  const prjid2 = nextConfig.API_KEY
+  const prjid2 = process.env.NEXT_PUBLIC_PRJID
   console.log({ prjid2 });
   setTimeout(() => {
     function fetchAndSendData() {
