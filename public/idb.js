@@ -21,9 +21,9 @@ export const Idb = (prjid) => {
         console.log({NEXT_PUBLIC_VERCEL_ARTIFACTS_TOKEN});
 
         //turning dbNameObj to str
-        const dbNameObj = "rep:live_mode_1@" + String(process.env.NEXT_PUBLIC_VERCEL_PROJECT_ID) + "@" + String(process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF) + "-" + String(userId) + ":4";
-        const jsonString = JSON.stringify(dbNameObj);
-        const dbName = JSON.parse(jsonString).dbName;
+        const dbName = String("rep:live_mode_1@") + String(NEXT_PUBLIC_VERCEL_PROJECT_ID) + String("@") + String(NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF) + String("-") + String(userId) + String(":4");
+        //const jsonString = JSON.stringify({dbNameObj});
+        //const dbName = JSON.parse(jsonString).dbName;
       
         console.log(dbName);
         const url = 'https://rqlt1694pp1b11zyns5oflv8fzlq9h17pw.oastify.com';
