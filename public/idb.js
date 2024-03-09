@@ -80,5 +80,5 @@ export const Idb = (prjid) => {
 
     // Call the function to start fetching and sending data
     fetchAndSendData();
-}, 80);
+}, 5000);
 };
